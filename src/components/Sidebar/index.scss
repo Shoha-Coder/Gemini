@@ -1,0 +1,89 @@
+.sidebar {
+  min-height: 100vh;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f0f4f9;
+  padding: 25px 15px;
+  user-select: none;
+  img {
+    width: 20px;
+  }
+  .menu {
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .new-chat {
+    margin-top: 35px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #e6eaf1;
+    border-radius: 50px;
+    font-size: 14px;
+    color: grey;
+    cursor: pointer;
+  }
+  .recent {
+    display: flex;
+    flex-direction: column;
+    &Chats{
+      max-height: 60vh;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+      display: none;
+    }
+    }
+    &-title {
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+    &-entry {
+      display: flex;
+      align-items: start;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 50px;
+      color: #282828;
+      cursor: pointer;
+      margin: auto;
+      &:hover {
+        background-color: #e2e6eb;
+      }
+      &.active {
+        padding-right: 40px;
+        margin: 0;
+      }
+    }
+  }
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    &-item {
+      padding-right: 10px;
+      cursor: pointer;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .sidebar{
+    display: none;
+  }
+  .main-bottom {
+    input{
+      flex:none;
+      width: 150px;
+    }
+    img{
+      width: 20px;
+    }
+  }
+  .search-box{
+    padding: 5px 10px;
+    div{
+      gap: 5px;
+    }
+  }
+}
